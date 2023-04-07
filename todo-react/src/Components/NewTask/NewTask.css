@@ -1,0 +1,54 @@
+
+/* New task container */
+.NewTask{
+    border-radius: 10px;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(217, 217, 217,.5);
+}
+
+/* Containers for the input and button element */
+.Container{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+
+.UserInput{
+    width: 65%;
+}
+
+.AddButton{
+    width: 25%;
+    justify-content: flex-end;
+    
+}
+
+/* Input element */
+input{
+    width: 100%;
+    border: none;
+    color: #676767;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    caret-color: #A2A1D4;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+/* Button */
+.Plus{
+    color: #A2A1D4 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    
+}
+
