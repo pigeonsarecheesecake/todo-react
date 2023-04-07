@@ -44,11 +44,6 @@ input:focus{
 /* Button */
 .Plus{
     color: #A2A1D4 ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
     
 }
 

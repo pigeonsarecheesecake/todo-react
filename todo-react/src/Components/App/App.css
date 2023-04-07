@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap');
 
+/* Global Styles */
 *{
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
@@ -25,20 +26,26 @@ h2{
 }
 
 button{
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 20%;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
+/* Main Content */
 .ToDoList{
+   /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid white; */
 }
 
 .TasksContainer{
@@ -48,34 +55,34 @@ button{
   grid-template-columns: 80% ;
   /* Tasks/Add a new value/Divider / Tasks /Finished Tasks /Space under*/
   grid-template-rows: repeat(3,3.5rem) .1rem repeat(3,auto) 3.5rem;
-  width: 500px;
+  min-width: 500px;
   background-color: #999999;
   border-radius: 30px;
   box-shadow: 7px 7px 15px rgb(36, 35, 35);
-  
   row-gap: 1rem;
 }
 
+/* Line Divider */
 .Divider{
   /* border: 1px solid black; */
   grid-row: 4;
   background-color: white;
-  
-}
-.DisplayTasks{
-  grid-row: 5;
-  /* border: 1px solid yellow; */
 }
 
-/* Targets second h2 under .ToDoList */
+.DisplayTasks{
+  /* border: 1px solid yellow; */
+  grid-row: 5;
+}
+
+/* Targets second h2 under .ToDoList, which is "Finished */
 .ToDoList h2:nth-of-type(2){
-  border: 1px solid black;
+  /* border: 1px solid black; */
   grid-row: 6;
   text-align: center;
 }
 
-.FinishedTasks{
+.CompletedTasks{
   grid-row: 7;
   height: 200px;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }

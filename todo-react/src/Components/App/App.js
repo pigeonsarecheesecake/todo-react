@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 import './App.css';
 import NewTask from '../NewTask/NewTask'
-import Tasks from '../TaskList/TaskList'
+import TaskList from '../TaskList/TaskList'
 
 
 function App() {
+  // Using hooks to set initial state and set up the next state
+  const [tasks, setTasks] = useState(["learn react"]);
+
+  // Handler for add
+  const AddHandler =e=>{
+
+  }
+  
   return (
     <div className="ToDoList">
-
       <h1>To Do List</h1>
+
+      {/* Adding a new task, and displays all tasks */}
       <div className="TasksContainer">
         <h2>Tasks</h2>
         <NewTask />
@@ -16,11 +26,12 @@ function App() {
 
         {/* Container to display tasks */}
         <div className="DisplayTasks Tasks">
-          <Tasks />
+          <TaskList tasks={tasks} />
         </div>
 
+        {/* Displays completed tasks */}
         <h2>Finished</h2>
-        <div className='FinishedTasks Tasks'>
+        <div className='CompletedTasks Tasks'>
 
         </div>
         

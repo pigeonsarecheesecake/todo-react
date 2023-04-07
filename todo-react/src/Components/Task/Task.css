@@ -22,3 +22,12 @@
     align-items: center;
     width: 10%;
 }
+
+.Delete{
+    color: rgb(190, 119, 119);
+}
+
+.Complete{
+    color:rgb(90, 122, 90);
+    font-size: 1rem;
+}
