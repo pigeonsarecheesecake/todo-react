@@ -1,14 +1,14 @@
 import React from 'react';
 import './NewTask.css'
 
-export default function NewTask(){
+export default function NewTask({onChange, onAdd}){
     return(
         <div className='NewTask'>
             <div className='UserInput Container'>
-                <input type="text" placeholder='Add a new value'></input>
+                <input onChange={onChange} type="text" placeholder='Add a new value'></input>
             </div>
             <div className='AddButton Container'>
-                <button className='Plus'>+</button>
+                <button onClick={onAdd} className='Plus'>+</button>
             </div>
             
             
