@@ -1,11 +1,11 @@
 import './Task.css'
 
-export default function Task({task, onRemove}){
+export default function Task({taskName, taskId, onRemove}){
     return(
-        <li className='Task'>
-            <div className='TaskName'>{task}</div>
+        <li taskID={taskId}className='Task'>
+            <div className='TaskName'>{taskName}</div>
             <div className='DeleteContainer'>
-                <button onClick={onRemove} className='Delete'>−</button>
+                <button onClick={() => onRemove(taskId)} className='Delete'>−</button>
             </div>
             <div className='CompleteContainer'>
                 <button className='Complete'>✓</button>

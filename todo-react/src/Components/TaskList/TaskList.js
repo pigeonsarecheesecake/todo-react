@@ -3,9 +3,9 @@ import Task from '../Task/Task'
 import './TaskList.css'
 
 export default function TaskList({tasks, onRemove}){
-    
+    // Assigns key with taskId
     const taskList = tasks.map(task => {
-        return <Task onRemove={onRemove} task={task} />
+        return <Task key={task.taskId} taskName={task.taskName} taskId={task.taskId} onRemove={onRemove}/>
     })
 
     return(

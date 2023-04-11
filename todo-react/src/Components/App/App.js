@@ -7,36 +7,46 @@ import TaskList from '../TaskList/TaskList'
 
 function App() {
   // Using hooks to set initial state for current Task and taskList
-  const [task, setNewTask] = useState("");
+  const [task, setNewTask] = useState({taskId:0, taskName:""});
   const [taskList, setTasks] = useState([]);
 
   // Handler for inputting current task
   const handleChange = e =>{
     // Grabs new task from input form and sets it as current state
-    setNewTask(e.target.value);
+    const newTask = e.target.value;
+    // Copies previous task state and keep other props that are not being replaced by setNewTask
+    setNewTask({...task,taskName:newTask});
+
   }
 
   // Handler for click to add task to the tasklist
   const handleAdd = () =>{
+    // If input is empty, exits function
     if (!task){
-      return
+      return;
     }
-    setTasks(
-      (prev) => {
-        return [task, ...prev]
-      }
-    )
+
+  // When user clicks add, it updates task's taskId using a callback function, this merges previous state and new one
+  setNewTask(prevTask => 
+    ({taskId: prevTask.taskId +1 }))
+  
+  // Updates tasklist by copying previous state and adds new task in the taskList
+  setTasks(
+    (prev) => {
+      return [task, ...prev]
+    }
+  )
   }
 
   // Handler for click to remove task from the tasklist
-  const handleRemove = e =>{
-    setTasks(
-      
-    )
+  const handleRemove = taskId =>{
+    let newTaskList = taskList.filter(task => task.taskId !== taskId)
+    setTasks(newTaskList)
   }
 
   return (
     <div className="ToDoList">
+      
       <h1>To Do List</h1>
 
       {/* Adding a new task, and displays all tasks */}
