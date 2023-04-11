@@ -21,11 +21,11 @@ function App() {
 
   // Handler for click to add task to the tasklist
   const handleAdd = () =>{
-    // If input is empty, exits function
-    if (!task){
+    // If taskName is empty, exits function
+    if (!task.taskName){
       return;
     }
-
+    
   // When user clicks add, it updates task's taskId using a callback function, this merges previous state and new one
   setNewTask(prevTask => 
     ({taskId: prevTask.taskId +1 }))
