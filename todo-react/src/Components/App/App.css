@@ -71,19 +71,16 @@ button{
 }
 
 .DisplayTasks{
-  /* border: 1px solid yellow; */
   grid-row: 5;
 }
 
 /* Targets second h2 under .ToDoList, which is "Finished */
 .ToDoList h2:nth-of-type(2){
-  /* border: 1px solid black; */
   grid-row: 6;
   text-align: center;
 }
 
 .CompletedTasks{
   grid-row: 7;
-  height: 200px;
-  /* border: 1px solid yellow; */
+  height: auto;
 }

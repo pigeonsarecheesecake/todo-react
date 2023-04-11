@@ -1,6 +1,6 @@
 import './Task.css'
 
-export default function Task({taskName, taskId, onRemove}){
+export default function Task({taskName, taskId, onRemove, onCompleted}){
     
     return(
         <li taskid={taskId} className='Task'>
@@ -10,7 +10,7 @@ export default function Task({taskName, taskId, onRemove}){
                 <button onClick={() => onRemove(taskId)} className='Delete'>−</button>
             </div>
             <div className='CompleteContainer'>
-                <button className='Complete'>✓</button>
+                <button onClick={() => onCompleted(taskId)} className='Complete'>✓</button>
             </div>
         </li>
     )

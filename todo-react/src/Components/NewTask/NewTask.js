@@ -10,8 +10,6 @@ export default function NewTask({onChange, onAdd}){
             <div className='AddButton Container'>
                 <button onClick={onAdd} className='Plus'>+</button>
             </div>
-            
-            
         </div>
         
     );
