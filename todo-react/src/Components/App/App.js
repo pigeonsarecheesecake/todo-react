@@ -18,6 +18,9 @@ function App() {
 
   // Handler for click to add task to the tasklist
   const handleAdd = () =>{
+    if (!task){
+      return
+    }
     setTasks(
       (prev) => {
         return [task, ...prev]
