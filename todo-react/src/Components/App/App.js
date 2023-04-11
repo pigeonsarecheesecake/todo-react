@@ -65,13 +65,13 @@ function App() {
 
         {/* Container to display tasks */}
         <div className="DisplayTasks Tasks">
-          <TaskList onRemove={handleRemove} onCompleted={handleCompleted} tasks={taskList} />
+          <TaskList onRemove={handleRemove} onCompleted={handleCompleted} tasks={taskList} isFinished={false}/>
         </div>
 
         {/* Displays completed tasks */}
         <h2>Finished</h2>
         <div className='CompletedTasks Tasks'>
-          <TaskList onRemove={handleRemove} onCompleted={handleCompleted} tasks={completedList}/>
+          <TaskList onRemove={handleRemove} onCompleted={handleCompleted} tasks={completedList} isFinished={true}/>
         </div>
       </div>
 
